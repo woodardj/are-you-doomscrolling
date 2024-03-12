@@ -6,7 +6,7 @@ function checkScroll() {
 
     if (currentScrollHeight > previousScrollHeight) {
         scrollIncreaseCount++;
-        if (scrollIncreaseCount === 2) {
+        if (scrollIncreaseCount === 15) {
             alert("Infinite scroll triggered twice!");
             scrollIncreaseCount = 0;
         }
