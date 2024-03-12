@@ -7,7 +7,7 @@ function checkScroll() {
     if (currentScrollHeight > previousScrollHeight) {
         scrollIncreaseCount++;
         if (scrollIncreaseCount === 15) {
-            alert("Infinite scroll triggered twice!");
+            alert("Are you Doomscrolling?");
             scrollIncreaseCount = 0;
         }
     }
