@@ -1,16 +1,18 @@
-let scrollCount = 0;
+let previousScrollHeight = 0;
+let scrollIncreaseCount = 0;
 
 function checkScroll() {
-    const currentScroll = window.pageYOffset;
-    const maxScroll = document.body.scrollHeight - window.innerHeight;
+    const currentScrollHeight = document.body.scrollHeight;
 
-    if (currentScroll === maxScroll) {
-        scrollCount++;
-        if (scrollCount === 2) {
+    if (currentScrollHeight > previousScrollHeight) {
+        scrollIncreaseCount++;
+        if (scrollIncreaseCount === 2) {
             alert("Infinite scroll triggered twice!");
-            scrollCount = 0;
+            scrollIncreaseCount = 0;
         }
     }
+
+    previousScrollHeight = currentScrollHeight;
 }
 
 window.addEventListener("scroll", checkScroll);
